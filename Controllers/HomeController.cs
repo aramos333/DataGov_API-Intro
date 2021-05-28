@@ -69,6 +69,25 @@ namespace DataGov_API_Intro.Controllers
             return View(parks);
         }
 
+
+        public IActionResult Contact()
+        {
+            ContactModel contact = new ContactModel();
+
+            contact.Name = "Administrator";
+            contact.Email = "ParkAdministrator@NationalParkService.gov";
+            contact.Phone = "(800) USAPARK";
+
+            return View(contact);
+        }
+
+
+        [HttpPost]
+        public IActionResult Contact(ContactModel contact)
+        {
+            return View(contact);
+        }
+
         public IActionResult Privacy()
         {
             return View();

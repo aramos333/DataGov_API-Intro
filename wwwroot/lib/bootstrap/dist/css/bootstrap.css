@@ -419,6 +419,12 @@ h6, .h6 {
   line-height: 1.2;
 }
 
+.display-5 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.0;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;

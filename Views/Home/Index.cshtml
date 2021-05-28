@@ -4,19 +4,24 @@
     ViewData["Title"] = "Home Page";
 }
 
+<!--
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
-    
 </div>
+-->
 <div class="text-left">
-    <h2 class="display-4">Parks</h2>
+    <h2 class="display-5">National Park Service API feed (first 20)</h2>
     <ul>
 
         @foreach (DataGov_API_Intro.Models.Park park in Model.data)
         {
-            <li>@("[" + park.parkCode + "] - " +  park.fullName + " - {" + park.latLong + "}")</li>
+        <li>@("[" + park.parkCode + "] - " +  park.fullName + " - {" + park.latLong + "}")</li>
         }
     </ul>
+</div>
+<div class="text-right">
+    <!-- AR -->
+    <p />
+    <a asp-controller="Home" asp-action="Index">Home</a>|<a asp-controller="Home" asp-action="Contact">Contact</a>|<a asp-controller="Home" asp-action="Privacy">Privacy</a>
 </div>
